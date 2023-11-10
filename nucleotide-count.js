@@ -1,8 +1,14 @@
-//
-// This is only a SKELETON file for the 'Nucleotide Count' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-
 export function countNucleotides(strand) {
-  throw new Error('Remove this statement and implement this function');
+  const nucleotideCount = {
+    'A': 0,
+    'C': 0,
+    'G': 0,
+    'T': 0
+  }
+  strand.split("").forEach(nucelotide => {
+    nucleotideCount[nucelotide] += 1;
+  });
+
+  const {A, C, G, T} = nucleotideCount;
+  return `${A} ${C} ${G} ${T}`
 }
